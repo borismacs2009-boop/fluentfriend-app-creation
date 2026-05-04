@@ -1,0 +1,19 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Chat with GigaChat tutor",
+      "method": "POST",
+      "path": "/",
+      "body": {"message": "Hello, I wants to learn English.", "history": []},
+      "expectedStatus": 200,
+      "expectedBody": {"reply": "string"},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
